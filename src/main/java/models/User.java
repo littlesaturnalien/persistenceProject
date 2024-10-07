@@ -9,17 +9,18 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_user;
 
-    @Column(name = "username", length = 15)
+    @Column(name = "username", length = 15, nullable = false, unique = true)
     private String username;
-    @Column(name = "password", length = 25)
+    @Column(name = "password", length = 25, nullable = false)
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "id_role", referencedColumnName = "id_role")
+    @JoinColumn(name = "id_role", referencedColumnName = "id_role", nullable = false)
     private Role role;
 
-    @Column(name = "email", length = 50)
+    @Column(name = "email", length = 50, nullable = false, unique = true)
     private String email;
 
+    @Column(name = "status", nullable = false)
     private boolean status;
 }
