@@ -13,6 +13,10 @@ public class User {
     private String username;
     @Column(name = "password", length = 25, nullable = false)
     private String password;
+    @Column(name = "full_name", length = 50, nullable = false)
+    private String full_name;
+    @Column(name = "phone_number", length = 15, nullable = false)
+    private String phone_number;
 
     @ManyToOne
     @JoinColumn(name = "id_role", referencedColumnName = "id_role", nullable = false)
