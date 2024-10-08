@@ -5,7 +5,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 public class EntityManagerAdmin {
-    private static final String PERSISTENCE_UNIT_NAME = "db_cafepyc";
+    private static final String PERSISTENCE_UNIT_NAME = "db_jakarta";
     private static EntityManager instance;
 
     public EntityManagerAdmin() {
